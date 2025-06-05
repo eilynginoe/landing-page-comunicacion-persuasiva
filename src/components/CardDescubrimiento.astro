@@ -1,0 +1,107 @@
+---
+// src/components/CardDescubrimiento.astro
+const { numero, texto, imagen } = Astro.props;
+const destino = "/ruta-futura"; // Sustituye este valor cuando la página esté lista
+---
+
+<div class="card-wrapper">
+  <a href={destino} class="card-link">
+    <div class="card">
+      <img src={imagen} alt={`Ícono ${numero}`} class="card-img" />
+      <p>{texto}</p>
+    </div>
+  </a>
+</div>
+
+<style>
+.card-wrapper {
+  background: #dcdcdc;
+  padding: 1rem;
+  border-radius: 20px;
+  display: inline-block;
+  box-shadow:
+    inset 6px 6px 12px #b8b8b8,
+    inset -6px -6px 12px #ffffff;
+}
+
+/* Hace que el enlace no tenga estilo por defecto */
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+.card {
+  background: #e0e0e0;
+  border-radius: 16px;
+  box-shadow:
+    6px 6px 12px #b8b9be,
+    -6px -6px 12px #ffffff;
+  padding: 1rem;
+  text-align: center;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    4px 4px 10px #b8b9be,
+    -4px -4px 10px #ffffff;
+}
+
+.card-img {
+  margin-bottom: 1rem;
+  width: 10vw;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #333;
+  font-weight: 800;
+}
+
+.card:active,
+.card:focus {
+  outline: none;
+  box-shadow:
+    0 0 15px rgba(255, 0, 0, 0.2),
+    6px 6px 12px #b8b9be,
+    -6px -6px 12px #ffffff;
+  transform: scale(0.98);
+}
+
+@media (max-width: 768px) {
+  .card {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-6px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+
+  .card-img {
+    width: 25vw;
+  }
+}
+
+@media (min-width: 769px) {
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow:
+      0 0 12px rgba(255, 0, 0, 0.4),
+      6px 6px 12px #b8b9be,
+      -6px -6px 12px #ffffff;
+  }
+}
+</style>
+

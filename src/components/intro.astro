@@ -1,0 +1,165 @@
+<div class="container">
+    <div class="text">
+        <h2 class="custom-heading">
+            Hay algo de lo que casi nadie habla y muchos descubren tarde:
+        </h2>
+
+        <p>
+            Convertirte en un experto técnico no te prepara para liderar personas.
+        </p><br /><br />
+        <p>Puedes dominar procesos, datos, sistemas…</p><br /><br />
+        <p>
+            Y aun así no tener las herramientas para movilizar ideas, inspirar equipos o generar acción.
+        </p>
+    </div>
+    <div class="images-wrapper">
+        <img
+            src="/industria1.svg"
+            alt="Imagen izquierda"
+            class="image image-left"
+        />
+        <img
+            src="/influencia.webp"
+            alt="Imagen central"
+            class="image image-center"
+        />
+        <img
+            src="/industria2.svg"
+            alt="Imagen derecha"
+            class="image image-right"
+        />
+    </div>
+    <div class="text">
+        <p>Brillas por lo que sabes!</p><br /><br />
+        <p>
+            Pero cuando llega el momento de influir, de conectar, te das cuenta de que eso requiere un lenguaje completamente distinto.
+        </p><br /><br />
+        <p>Y ahí surge una pregunta que lo cambia todo:</p>
+    </div>
+</div>
+
+<style>
+    .container {
+        display: flex;
+        justify-content: center; /* centra horizontalmente */
+        align-items: center; /* opcional, si quieres centrar vertical */
+        flex-direction: column; /* para que el texto quede arriba y las imágenes debajo */
+        margin: 0 auto;
+    }
+
+    .text {
+        width: 90vw;
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.25rem;
+        margin-bottom: 2rem;
+        line-height: 1.5;
+        white-space: pre-line;
+    }
+
+    .custom-heading {
+        font-family: "Quintessential", serif;
+        font-size: clamp(1rem, 8vw, 2.5rem);
+        margin-top: 2rem;
+        text-align: center;
+    }
+
+    .images-wrapper {
+        position: relative;
+        width: 90vw; /* controlamos ancho para que quepan las imágenes */
+        overflow: visible;
+    }
+
+    /* Imagen central ocupa el espacio normal */
+    .image-center {
+        width: 50%;
+        object-fit: cover;
+        border-radius: 8px;
+        position: relative;
+        z-index: 2;
+        display: block;
+        margin: 0 auto;
+        padding-bottom: 3rem;
+    }
+
+    /* Imágenes laterales absolutas para desbordar */
+    .image-left,
+    .image-right {
+        position: absolute;
+        top: -15vh;
+        width: 25%;
+        border-radius: 8px;
+        z-index: 1;
+        box-sizing: border-box;
+    }
+
+    .image-left {
+        left: 0;
+        transform: translateX(-15%);
+    }
+
+    .image-right {
+        right: 0;
+        transform: translateX(15%);
+    }
+
+    /* Responsive behavior */
+    @media (max-width: 768px) {
+        .images-wrapper {
+            height: auto;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .image {
+            width: 100%;
+            height: auto;
+            border-radius: 0;
+            margin-bottom: 1rem;
+            position: relative;
+            transition: all 0.5s ease;
+        }
+
+        .image-left,
+        .image-right {
+            opacity: 0.3; /* más opacas */
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 100%;
+            height: 300px;
+            z-index: 1;
+            filter: brightness(0.7);
+            border-radius: 0;
+        }
+
+        .image-center {
+            position: relative;
+            z-index: 3; /* encima de las otras dos */
+            opacity: 1;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    @media (min-width: 768px) {
+  .text {
+    width: 60vw;
+  }
+}
+
+@media (min-width: 1200px) {
+  .text {
+    width: 50vw;
+  }
+}
+
+@media (max-width: 1024px) {
+  .image-left,
+  .image-right {
+    display: none;
+  }
+}
+
+</style>

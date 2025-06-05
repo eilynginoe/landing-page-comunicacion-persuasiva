@@ -1,0 +1,249 @@
+<section class="llevar-section">
+  <img src="/do-it.webp" alt="Decoración izquierda" class="img-left" />
+
+  <div class="content">
+    <h2 class="valor">¿Qué te vas a llevar?</h2>
+    <p>
+      Este curso es diferente. No te llenará de frases motivacionales ni teorías imposibles de aplicar.
+    </p>
+    <p>
+      Te dará herramientas prácticas, simples y poderosas para que tu comunicación se convierta en tu mayor activo como líder.
+    </p><br />
+    <p>Aprenderás lo que muy pocos enseñan:</p>
+
+    <div class="resaltado">
+      <p class="frases">
+        <a
+          href="URL-PROXIMA-DECIR-MENOS.html"
+          class="frase-link"
+          aria-label="Ir a cómo decir menos y lograr más"
+        >
+          Cómo decir menos y lograr más.
+        </a>
+        <a
+          href="URL-PROXIMA-INFLUIR.html"
+          class="frase-link"
+          aria-label="Ir a cómo influir sin imponer"
+        >
+          Cómo influir sin imponer.
+        </a>
+        <a
+          href="URL-PROXIMA-LIDERAR.html"
+          class="frase-link"
+          aria-label="Ir a cómo liderar con tus palabras"
+        >
+          Cómo liderar con tus palabras.
+        </a>
+      </p><br />
+      <ul class="frases-lista">
+        <li>
+          <a
+            href="URL-PROXIMA-DECIR-MENOS.html"
+            class="frase-link"
+            aria-label="Ir a cómo decir menos y lograr más"
+          >
+            Cómo decir menos y lograr más.
+          </a>
+        </li>
+        <li>
+          <a
+            href="URL-PROXIMA-INFLUIR.html"
+            class="frase-link"
+            aria-label="Ir a cómo influir sin imponer"
+          >
+            Cómo influir sin imponer.
+          </a>
+        </li>
+        <li>
+          <a
+            href="URL-PROXIMA-LIDERAR.html"
+            class="frase-link"
+            aria-label="Ir a cómo liderar con tus palabras"
+          >
+            Cómo liderar con tus palabras.
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <img src="/pie.webp" alt="Decoración derecha" class="img-right" />
+</section>
+
+<style>
+  .llevar-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 3rem 2rem;
+    position: relative;
+    flex-wrap: nowrap;
+  }
+
+  .content {
+    width: 50vw;
+  }
+
+  .img-left,
+  .img-right {
+    width: 20vw;
+  }
+
+  .valor {
+    font-family: "Quintessential", serif;
+    font-weight: bold;
+    text-align: center;
+    margin-left: -5vw;
+  }
+
+  .resaltado .frases {
+    color: #d72638; /* rojo fuerte */
+    font-weight: bold;
+    margin-top: 1rem;
+  }
+
+  .resaltado .frases-lista {
+    display: none;
+    color: #d72638;
+    font-weight: bold;
+    list-style-type: disc;
+    margin: 1rem 0;
+    text-align: left;
+    font-size: clamp(0.5rem, 8vw, 1.3rem);
+
+  }
+
+  .resaltado .frases-lista li {
+    margin-bottom: 0.5rem;
+  }
+
+  .frase-link {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+  }
+
+  .frase-link:hover {
+    text-decoration: underline;
+    color: #d72638; /* O el color destacado que estés usando */
+  }
+
+  p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    white-space: pre-line;
+  }
+
+  /* MÓVIL: hasta 767px */
+  @media (max-width: 767px) {
+    .llevar-section {
+      flex-direction: column;
+      padding: 2rem 1rem;
+      gap: 1.5rem;
+    }
+
+    .content {
+      width: 90vw;
+    }
+
+    .img-left {
+      display: none;
+    }
+
+    .img-right {
+      order: 2;
+      width: 70%;
+      max-width: 280px;
+      margin-top: 1rem;
+      box-sizing: border-box;
+    }
+
+    .valor {
+      margin-left: 0;
+      font-size: 1.5rem;
+    }
+
+    p {
+      width: 100%;
+      font-size: 1.25rem;
+    }
+
+.resaltado .frases-lista {
+  list-style-type: disc;
+  list-style-position: outside;
+  padding-left: 1.5rem;
+  margin-left: 0;
+  font-size: clamp(0.8rem, 8vw, 1.3rem);
+  color: #d72638;
+  font-weight: bold;
+  text-align: left;
+}
+
+.resaltado .frases-lista li {
+  margin-bottom: 0.8rem;
+  display: list-item; /* fuerza el comportamiento de lista */
+  line-height: 1.4;
+}
+  }
+
+  /* TABLET: de 768px a 1024px */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .llevar-section {
+      flex-direction: column;
+      padding: 2rem 2rem;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .content {
+      width: 60vw; /* Aquí lo corriges a lo que necesitas */
+    }
+
+    .img-left {
+      display: none;
+    }
+
+    .img-right {
+      display: block;
+      max-width: 300px;
+      width: 50%;
+      height: auto;
+      margin-top: 1rem;
+    }
+
+    .valor {
+      margin-left: 0;
+      font-size: 1.75rem;
+      text-align: center;
+    }
+
+    p {
+      width: 100%;
+      font-size: 1.15rem;
+    }
+
+    .resaltado {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .resaltado .frases {
+      display: none;
+    }
+
+    .resaltado .frases-lista {
+      display: block;
+      text-align: left;
+      padding: 0 1rem;
+    }
+
+    .resaltado .frases-lista li {
+      margin-bottom: 0.5rem;
+    }
+  }
+</style>

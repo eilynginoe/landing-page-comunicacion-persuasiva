@@ -1,0 +1,88 @@
+<section class="cierre-landing">
+    <div class="cierre-landing__icono">
+        <img src="/flecha.webp" alt="Flecha decorativa" />
+    </div>
+    <div class="cierre-landing__contenido">
+        <p class="cierre-landing__frase-principal">
+            Si alguna vez te preguntaste por qué<br />
+            algunos líderes logran tanto con tan poco...
+        </p>
+        <p class="cierre-landing__frase-secundaria">
+            es porque saben lo que vas a aprender aquí
+        </p>
+        <button class="btn-cta">Accede gratis ya!</button>
+    </div>
+</section>
+
+<style>
+    .cierre-landing {
+        background-color: white;
+        text-align: center;
+        padding: 4rem 0;
+    }
+
+    .cierre-landing__icono img {
+        width: clamp(60px, 8vw, 200px);
+        height: auto;
+        margin: 0 auto 1.5rem;
+    }
+
+   .cierre-landing__frase-principal {
+    font-family: "Calistoga", cursive;
+    font-size: clamp(12px, 5vw, 42px); /* entre 20px y 32px */
+    color: #2b2b2b;
+    margin-bottom: 2rem;
+    line-height: 2;
+    text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.5);
+}
+
+.cierre-landing__frase-secundaria {
+    font-family: "Calistoga", cursive;
+    font-style: italic;
+    font-weight: bold;
+    font-size: clamp(24px, 6vw, 60px); /* entre 24px y 48px */
+    color: #8c0303;
+    margin-bottom: 4rem;
+    margin-top: 4rem;
+}
+
+.btn-cta {
+    width: clamp(200px, 25vw, 280px);
+    height: 52px;
+    background-color: #8c0303;
+    color: white;
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+    border: none;
+    border-radius: 15px;
+    margin-bottom: 3rem;
+    cursor: pointer;
+    box-shadow: inset 5px 5px 4px 4px rgba(246, 159, 169, 0.6);
+    transition:
+        width 0.5s ease-in-out,
+        border-radius 0.5s ease-in,
+        background-color 0.3s ease;
+}
+
+.btn-cta:hover {
+    width: clamp(300px, 30vw, 360px);
+    border-radius: 9999px;
+}
+
+    /*@media (max-width: 640px) {
+        .cierre-landing__frase-principal {
+            font-size: 1.4rem;
+        }
+
+        .cierre-landing__frase-secundaria {
+            font-size: 1rem;
+        }
+
+        .btn-cta {
+            width: 240px;
+        }
+
+        .btn-cta:hover {
+            width: 270px;
+        }
+    }*/
+</style>

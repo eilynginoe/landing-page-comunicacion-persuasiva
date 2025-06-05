@@ -1,0 +1,94 @@
+<section class="hero">
+    <!-- Capa diagonal amarilla -->
+    <div class="capa-intro"></div>
+
+    <div class="hero-content">
+        <h1 class="titulo-principal">
+            El secreto mejor guardado de<br />
+            la comunicación persuasiva
+        </h1>
+        <p class="subtitulo">que nadie te cuenta</p>
+        <img src="/flecha.webp" alt="Flecha" class="flecha" />
+    </div>
+
+    <img src="/leanind-imagen.svg" alt="Logo" class="decoracion-izquierda" />
+</section>
+
+<style>
+    .hero {
+        height: 90vh;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background: linear-gradient(90deg, #fde2c9, #d57676, #810909, #161008);
+        color: #000;
+        padding: 2rem 2rem;
+    }
+
+    /* 👉 Nueva capa diagonal */
+    .capa-intro {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(
+            233,
+            173,
+            160,
+            0.3
+        ); /* Color con transparencia */
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 80% 100%);
+        z-index: 0;
+    }
+
+    .hero-content {
+        z-index: 1;
+        max-width: 800px;
+    }
+
+    .titulo-principal {
+        font-family: "Calistoga", serif;
+        font-weight: 800;
+        font-size: clamp(2rem, 6vw, 3.8rem);
+        text-align: center;
+        margin-top: 8vw;
+    }
+
+    .subtitulo {
+        font-family: "Quintessential", serif;
+        font-size: clamp(2rem, 6vw, 3.3rem);
+        color: #fff;
+        margin-bottom: 1rem;
+    }
+
+    .flecha {
+        width: 10vw;
+        height: auto;
+        margin-top: 1rem;
+    }
+
+    .decoracion-izquierda {
+        width:30vw; 
+        position: absolute;
+        bottom: -20vh;
+        left: -150px;
+        /*height: 540px;*/
+        z-index: 99; /* para que esté encima del siguiente componente */
+    }
+
+    @media (max-width: 768px) {
+        .decoracion-izquierda {
+            width: 40vw;
+            bottom: -10vh;
+            left: -20vw;
+        }
+
+        .flecha {
+            width: 15vw;
+        }
+    }
+
+</style>

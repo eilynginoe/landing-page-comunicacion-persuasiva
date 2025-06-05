@@ -1,0 +1,119 @@
+---
+// src/components/Descubrimientos.astro
+import CardDescubrimiento from "./CardDescubrimiento.astro";
+---
+
+<section class="descubrimientos">
+    <h2 class="titulo">Y DESCUBRIRÁS:</h2>
+    <div class="grid">
+        <CardDescubrimiento
+            numero="1"
+            texto="Por qué tu estilo de comunicación puede estar saboteando tu liderazgo?"
+            imagen="/uno.webp"
+        />
+        <CardDescubrimiento
+            numero="2"
+            texto="Cómo activar la escucha activa y convertirla en una ventaja estratégica"
+            imagen="/dos.webp"
+        />
+        <CardDescubrimiento
+            numero="3"
+            texto="Los errores más comunes que apagan el compromiso en un equipo"
+            imagen="/tres.webp"
+        />
+        <CardDescubrimiento
+            numero="4"
+            texto="Técnicas de comunicación persuasiva que usan líderes de alto impacto"
+            imagen="/cuatro.webp"
+        />
+        <CardDescubrimiento
+            numero="5"
+            texto="Cómo estructurar mensajes que generan movimiento, no resistencia"
+            imagen="/cinco.webp"
+        />
+        <CardDescubrimiento
+            numero="6"
+            texto="El arte de adaptar tu mensaje según la audiencia y el contexto"
+            imagen="/seis.webp"
+        />
+    </div>
+
+    <!-- Nueva sección con imagen y botón -->
+    <div class="imagen-boton">
+        <button class="btn-cta">Quiero saber mas!</button>
+        <img src="/go.webp" alt="Descripción de la imagen" />
+    </div>
+</section>
+
+<style>
+    .descubrimientos {
+        padding: 4rem 2rem;
+        text-align: center;
+        font-family: "Montserrat", sans-serif;
+        font-size: clamp(1rem, 6vw, 1.5rem)
+    }
+
+    .titulo {
+        font-weight: bold;
+        margin-bottom: 2rem;
+        font-size: 1.5rem;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas fijas */
+        gap: 1.5rem; /* Menor espacio entre tarjetas */
+        justify-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .imagen-boton {
+        margin-top: 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .imagen-boton img {
+        /*max-width: 100%;*/
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .btn-cta {
+        width:280px;
+        height: 52px;
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.25rem;
+        background-color: #8c0303;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        margin-bottom: 3rem;
+        cursor: pointer;
+        box-shadow: inset 5px 5px 4px 4px rgba(246, 159, 169, 0.6);
+        transition:
+            width 0.5s ease-in-out,
+            border-radius 0.5s ease-in,
+            background-color 0.3s ease;
+    }
+
+    .btn-cta:hover {
+        width: clamp(310px, 30vw, 360px);
+        border-radius: 9999px;
+    }
+
+    @media (max-width: 1024px) {
+        .grid {
+            grid-template-columns: repeat(2, 1fr); /* 2 por fila */
+        }
+    }
+
+    @media (max-width: 640px) {
+        .grid {
+            grid-template-columns: 1fr; /* 1 por fila */
+        }
+    }
+</style>

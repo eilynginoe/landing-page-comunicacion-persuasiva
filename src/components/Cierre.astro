@@ -1,0 +1,75 @@
+<section class="cierre">
+  <div class="cierre__mensaje">
+    <h2 class="cierre__titulo-principal">
+      IMAGINA LIDERAR SIN NECESIDAD DE LEVANTAR LA VOZ
+    </h2>
+    <p class="cierre__subtitulo">
+      Imagina ver a tu equipo actuar con convicción después de escucharte
+    </p>
+    <p class="cierre__mensaje-secundario">
+      Eso es lo que hace la comunicación persuasiva
+    </p>
+    <p class="cierre__mensaje-secundario">Y tú también puedes dominarla</p>
+  </div>
+</section>
+
+<style>
+  .cierre {
+    min-height: 100vh; /* Asegura pantalla completa, pero permite crecer */
+    background: linear-gradient(90deg, #000000, #474747, #5c5c5c, #abb1b1);
+    padding: 4rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+  }
+
+  .cierre__mensaje {
+    background: white;
+    padding: 2rem;
+    width: 80vw;
+    height: auto;
+    text-align: center;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+  }
+
+  .cierre__titulo-principal {
+    font-family: "Quintessential", cursive;
+    font-size: clamp(18px, 4vw, 32px);
+    font-style: italic;
+    text-transform: uppercase;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    line-height: 1.2;
+  }
+
+  .cierre__subtitulo {
+    font-family: "Calistoga", cursive;
+    font-size: clamp(28px, 5vw, 64px);
+    font-weight: normal;
+    margin-bottom: 4rem;
+    line-height: 1.15;
+  }
+
+  .cierre__mensaje-secundario {
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(18px, 3vw, 32px);
+    font-weight: normal;
+    margin-bottom: 2rem;
+    line-height: 1.3;
+  }
+
+  @media (max-width: 768px) {
+    .cierre {
+      padding: 2rem 1rem;
+    }
+
+    .cierre__mensaje {
+      width: 90vw;
+      padding: 1.5rem;
+    }
+  }
+</style>
+
